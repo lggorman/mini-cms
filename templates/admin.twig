@@ -1,0 +1,21 @@
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/admin.css">
+</head>
+<body>
+<div class="container">
+	<h1>Admin</h1>
+	<form method="post" action="admin.php">
+		{% for section in sections %}
+		  <section>
+			<label for="title">Title: </label><input type="text" name="{{loop.index}}[title]" value="{{section.title}}"></input>
+			<label for="slug">Slug: </label><input type="text" name="{{loop.index}}[slug]" value="{{section.slug}}"></input>
+			<label for="content">Content: </label><textarea name="{{loop.index}}[content]">{{section.content}}</textarea>
+		  </section>
+		{% endfor %}
+		<button type="submit">Update</button>
+	</form>
+</div>
+</body>
+</html>

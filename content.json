@@ -1,0 +1,14 @@
+{
+    "sections": [
+        {
+            "title": "aight",
+            "slug": "luke_skywalker",
+            "content": "the hero!"
+        },
+        {
+            "title": "Hans Solo",
+            "slug": "hans_solo",
+            "content": "More on Hans"
+        }
+    ]
+}
