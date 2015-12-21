@@ -1,12 +1,14 @@
 <?php
+session_start();
 
-require_once 'vendor/autoload.php';
-
-$loader = new Twig_Loader_Filesystem('templates');
-$twig = new Twig_Environment($loader);
-
-include 'class-section.php';
 include 'class-admin.php';
+include 'class-mini-cms.php';
+
+$twig = MiniCMS::twigInit();
+
+if(!isset($_SESSION['username'])) {
+	header('Location: login.php');
+}
 
 $admin = new Admin;
 

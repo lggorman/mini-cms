@@ -3,6 +3,7 @@
 class Admin {
 
 	var $sections;
+	var $users;
 
 	function init( $twig ) {
 		$this->sections = $this->getSections();
@@ -33,6 +34,22 @@ class Admin {
 		$content->sections = $this->sections;
 		$string = json_encode($content, JSON_PRETTY_PRINT);
 		file_put_contents('content.json', $string);	
+	}
+
+	function getUsers() {
+		$string = file_get_contents('users.json');
+		$content = json_decode($string);
+		return $content->users;
+	}
+
+	function findUser( $username ) {
+		$users = self::getUsers();
+		foreach($users as $user) {
+			if($user->username == $username) {
+				return $user;
+			}
+		}
+		return false;
 	}
 
 }
