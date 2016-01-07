@@ -1,8 +1,8 @@
 <?php
 
-include 'class-mini-cms.php';
-include 'class-admin.php';
-include 'class-user.php';
+include 'lib/class-mini-cms.php';
+include 'lib/class-admin.php';
+include 'lib/class-user.php';
 
 if(isset($_POST) && !empty($_POST)) {
 	$user = new User($_POST['username'], $_POST['password']);

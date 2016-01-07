@@ -1,7 +1,7 @@
 <?php
 
-include 'class-admin.php';
-include 'class-mini-cms.php';
+include 'lib/class-admin.php';
+include 'lib/class-mini-cms.php';
 
 $twig = MiniCMS::twigInit();
 

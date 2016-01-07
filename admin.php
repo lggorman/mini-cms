@@ -1,14 +1,14 @@
 <?php
 session_start();
 
-include 'class-admin.php';
-include 'class-mini-cms.php';
+include 'lib/class-admin.php';
+include 'lib/class-mini-cms.php';
 
 $twig = MiniCMS::twigInit();
 
-// if(!isset($_SESSION['username'])) {
-// 	header('Location: login.php');
-// }
+if(!isset($_SESSION['username'])) {
+	header('Location: login.php');
+}
 
 $admin = new Admin;
 

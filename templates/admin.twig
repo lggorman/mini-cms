@@ -7,7 +7,6 @@
 	{% for section in sections %}
 	  <section>
 		<label for="title">Title: </label><input type="text" name="{{loop.index}}[title]" value="{{section.title}}"></input>
-		<label for="slug">Slug: </label><input type="text" name="{{loop.index}}[slug]" value="{{section.slug}}"></input>
 		<label for="content">Content: </label><textarea name="{{loop.index}}[content]">{{section.content}}</textarea>
 	  </section>
 	{% endfor %}
