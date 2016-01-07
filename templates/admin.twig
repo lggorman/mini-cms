@@ -3,7 +3,7 @@
 {% block content %}
 <h1>Admin</h1>
 <a href="logout.php">Logout</a>
-<form method="post" action="login.php">
+<form method="post" action="admin.php">
 	{% for section in sections %}
 	  <section>
 		<label for="title">Title: </label><input type="text" name="{{loop.index}}[title]" value="{{section.title}}"></input>

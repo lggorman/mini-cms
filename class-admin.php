@@ -7,7 +7,6 @@ class Admin {
 
 	function init( $twig ) {
 		$this->sections = $this->getSections();
-
 		$content = array();
 		foreach($this->sections as $section) {
 			$content['sections'][$section->slug] = $section;

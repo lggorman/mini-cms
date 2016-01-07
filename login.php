@@ -1,6 +1,7 @@
 <?php
 
 include 'class-mini-cms.php';
+include 'class-admin.php';
 include 'class-user.php';
 
 if(isset($_POST) && !empty($_POST)) {
